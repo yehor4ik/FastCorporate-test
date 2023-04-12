@@ -1,0 +1,298 @@
+/*RESET CSS*/
+html, body, div, span, h1, h2, h3, a, footer, header, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    vertical-align: baseline;
+}
+
+footer, header {
+    display: block;
+    background-color: #000;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+body {
+    line-height: 1;
+}
+
+.container {
+    max-width: 1139px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+.header .content {
+    position: relative;
+    font-weight: 500;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.header .content span {
+    color: #FFB800;
+    border-right: 1px solid #FFFFFF;
+    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
+}
+
+/*MAIN*/
+.main {
+    margin: 151px 0 75px 0;
+}
+
+.main .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .content h1 {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0 0  104px 0;
+}
+
+.main .content .card {
+    width: 100%;
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+
+}
+
+.main .content .cart-item-wrapper {
+    width: 33.33%;
+}
+
+.main .content .card-item {
+    background-color: #F3F5F6;
+    position: relative;
+    padding: 71px 0 26px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.main .card-item .price-wrapper {
+    max-width: 240px;
+    min-height: 100px;
+    width: 100%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.main .cart-item-wrapper .padding-card {
+    padding: 15px;
+}
+
+.main .card-item .price-wrapper span {
+    font-family: 'Bebas Neue', cursive;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.main .card-item .price-wrapper .price span {
+    font-size: 48px;
+}
+
+.main .card-item .price-wrapper.best-value:before {
+    content: 'Best value';
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    background-color: #FFB800;
+    padding: 4px 12px;
+    top: 0;
+    right: 0;
+}
+
+.main .card-item .price-wrapper span.prev-price {
+    text-decoration-line: line-through;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #929292;
+}
+
+.main .card-item .price-wrapper svg {
+    position: absolute;
+    top: -14px;
+    left: -14px;
+}
+
+.main .card-item .bold-text  {
+    font-weight: 500;
+}
+
+.main .card-item a  {
+    text-decoration: none;
+    max-width: 190px;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(0deg, #130999 -0.01%, #174D8F 35.01%, #1A7F87 64.91%, #1C9E83 87.44%, #1DAA81 99.99%);
+    border-radius: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 32px 0 0 0;
+}
+
+.main .card-item a svg {
+    margin: 0 0 0 15px;
+}
+
+/*FOOTER*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.footer .content p:first-child {
+    color: #FFB800;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.download-icon-top {
+    display: none;
+    top: 41px;
+    right: 0;
+    animation-name: jump-top;
+}
+
+.download-icon-bottom {
+    display: none;
+    bottom: 65px;
+    left: 0;
+    animation-name: jump-bottom;
+}
+
+body > svg {
+    position: fixed;
+    opacity: 0;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes jump-top {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes jump-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1178px) {
+    .container {
+        max-width: 908px;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .main .content .cart-item-wrapper {
+        width: 50%;
+    }
+
+    .main .content .padding-card {
+        padding: 0 15px 60px 15px;
+    }
+}
+
+@media screen and (max-width: 633px) {
+    .container {
+        max-width: 344px;
+    }
+
+    .main {
+        margin: 40px 0 25px 0;
+    }
+
+    .main h1 {
+        font-size: 30px!important;
+    }
+
+    .main .content .cart-item-wrapper {
+        width: 100%;
+    }
+
+    .price span {
+        font-size: 38px!important;
+    }
+
+    .card-item p {
+        font-size: 15px!important;
+    }
+
+    .header .content {
+        font-size: 15px;
+    }
+
+    .footer p:first-child {
+        font-size: 15px!important;
+    }
+
+    .footer p:last-child {
+        font-size: 13px!important;
+    }
+}
+
